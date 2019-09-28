@@ -1,6 +1,6 @@
 # quiz_app
 
-A Quiz App Flutter Application form Learn Flutter &amp; Dart to Build iOS &amp; Android Apps by Maximilian Schwarzmuller
+A Quiz App Flutter Application form Learn Flutter &amp; Dart to Build iOS &amp; Android Apps by Max
 
 ## Getting Started
 
