@@ -7,9 +7,14 @@ void main() => runApp(QuizApp());
 // void main() {
 //   runApp(QuizApp());
 // }
+class QuizApp extends StatelessWidget {
+  Widget build(BuildContext context){
+    return MaterialApp(home: Text('Hello! Tarik'),);
+  }
+}
 
 
-class QuizApp extends StatefulWidget {
+class QuizAppp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -17,7 +22,7 @@ class QuizApp extends StatefulWidget {
   }
 }
 
-class _MyAppState extends State<QuizApp> {
+class _MyAppState extends State<QuizAppp> {
   final _questions = const [
     {
       'questionText': 'What\'s your favorite color?',
