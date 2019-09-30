@@ -7,22 +7,89 @@ void main() => runApp(QuizApp());
 // void main() {
 //   runApp(QuizApp());
 // }
-class QuizApp extends StatelessWidget {
-  Widget build(BuildContext context){
-    return MaterialApp(home: Text('Hello! Tarik'),);
+/*
+class QuizAppp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      debugShowMaterialGrid: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('My Quiz App'),
+        ),
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              Text('Hello! Tarik.'),
+              FlatButton(
+                onPressed: () {
+                  debugPrint('Flat Button onPressed...');
+                },
+                child: Text(
+                  'FlatButton',
+                ),
+                color: Colors.red,
+                textColor: Colors.white,
+                hoverColor: Colors.black,
+                splashColor: Colors.black,
+                highlightColor: Colors.black,
+                disabledColor: Colors.black,
+                disabledTextColor: Colors.black,
+              ),
+              FlatButton.icon(
+                onPressed: () {},
+                icon: Icon(Icons.portrait),
+                label: Text('Flat Button Icon'),
+              ),
+              RaisedButton.icon(
+                onPressed: () {},
+                icon: Icon(Icons.portrait),
+                label: Text('Flat Button Icon'),
+              ),
+              IconButton(
+                icon: Icon(Icons.child_friendly),
+                onPressed: () {},
+              ),
+              InkWell(
+                child: Text(
+                  "https://quickstartflutterdart.blogspot.in/",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 13,
+                      decoration: TextDecoration.underline),
+                ),
+                onTap: () {},
+              ),
+              GestureDetector(
+                onTap: () {
+                  print('Clicked on URL by GestureDetector Widget');
+                },
+                child: Text(
+                  "https://quickstartflutterdart.blogspot.in/",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 13,
+                      decoration: TextDecoration.underline),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
+*/
 
-
-class QuizAppp extends StatefulWidget {
+class QuizApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return new _MyAppState();
   }
 }
 
-class _MyAppState extends State<QuizAppp> {
+class _MyAppState extends State<QuizApp> {
   final _questions = const [
     {
       'questionText': 'What\'s your favorite color?',
@@ -68,7 +135,7 @@ class _MyAppState extends State<QuizAppp> {
       _questionIndex = _questionIndex + 1;
     });
     //print(_questions[_questionIndex]);
-    print('Question Index: '+_questionIndex.toString());
+    print('Question Index: ' + _questionIndex.toString());
     if (_questionIndex < _questions.length) {
       print('We have more question!');
     } else {
@@ -78,16 +145,11 @@ class _MyAppState extends State<QuizAppp> {
 
   @override
   Widget build(BuildContext context) {
-    // var dummy = const ['Hello'];
-    // dummy.add('Tarik');
-    // print(dummy);
-    // dummy = [];
-
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       home: Scaffold(
           appBar: AppBar(
-            title: Text('My First App'),
+            title: Text('My Quiz App'),
           ),
           body: _questionIndex < _questions.length
               ? Quiz(
